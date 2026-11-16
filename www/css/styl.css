@@ -1,0 +1,55 @@
+:root {
+  --tlo: #f4f5f7;
+  --karta: #ffffff;
+  --tekst: #1f2933;
+  --przygaszony: #616e7c;
+  --akcent: #2563eb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tlo: #111827;
+    --karta: #1f2937;
+    --tekst: #f3f4f6;
+    --przygaszony: #9ca3af;
+    --akcent: #60a5fa;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: var(--tlo);
+  color: var(--tekst);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.karta {
+  max-width: 32rem;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  background: var(--karta);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+  text-align: center;
+}
+.kod {
+  margin: 0;
+  font-size: clamp(4rem, 15vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--akcent);
+}
+h1 { margin: 1rem 0 0.5rem; font-size: 1.5rem; }
+p { margin: 0 0 1.5rem; color: var(--przygaszony); }
+.przycisk {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--akcent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.przycisk:hover { opacity: 0.9; }
